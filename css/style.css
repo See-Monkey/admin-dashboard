@@ -1,3 +1,4 @@
+/* =============== reset =============== */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -33,6 +34,8 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+/* =============== global =============== */
 :root {
   --cream: #eaefbd;
   --teagreen: #c9e3ac;
@@ -54,49 +57,116 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 30px;
     font-family: "Metamorphous";
     font-weight: 400;
     font-style: normal;
+    color: var(--olive);
 }
 h2 {
     font-size: 26px;
     font-family: "Metamorphous";
     font-weight: 400;
     font-style: normal;
+    color: var(--olive);
 }
 h3 {
     font-size: 24px;
     font-family: "Metamorphous";
     font-weight: 400;
     font-style: normal;
+    color: var(--olive);
 }
 h4 {
     font-size: 20px;
     font-family: "Eagle Lake";
     font-weight: 400;
     font-style: normal;
+    color: var(--olive);
 }
 h5 {
     font-size: 18px;
     font-family: "Eagle Lake";
     font-weight: 400;
     font-style: normal;
+    color: var(--olive);
 }
 h6 {
     font-size: 16px;
     font-family: "Eagle Lake";
     font-weight: 400;
     font-style: normal;
+    color: var(--olive);
 }
 p {
     font-size: 16px;
+    color: var(--olive);
 }
 .trending p {
     font-size: 14px;
+    color: var(--olive);
 }
 
 .icon img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+}
+
+body {
+  height: 100vh;
+}
+
+.page {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 150px auto;
+  grid-template-columns: 350px auto;
+}
+
+/* =============== sidebar =============== */
+.sidebar {
+  background-color: var(--pistachio);
+  grid-area: 1 / 1 / -1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.sidebarNav {
+  display: grid;
+  grid-template-columns: 60px auto;
+  row-gap: 10px;
+}
+
+.sidebarAdmin {
+  display: grid;
+  grid-template-columns: 60px auto;
+  row-gap: 10px;
+}
+
+.iconCredit {
+  position: fixed;
+  bottom: 10px;
+  align-self: center;
+  
+}
+
+/* =============== header =============== */
+.header {
+  background-color: var(--cream);
+  grid-area: 1 / 2 / 2 / -1;
+}
+
+/* =============== content =============== */
+.content {
+  background-color: var(--teagreen);
+  grid-area: 2 / 2 / -1 / -1;
 }
